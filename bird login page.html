@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title> BIRD SYSTEM REGISTRATION </title>
+  <script>
+    function validateForm(){
+      // Get the values of password fields
+      let x = document.forms["myForm"]["pswd"].value;
+      let y = document.forms["myForm"]["cpswd"].value;
+      
+      // Check if passwords match
+      if(x === y) {
+        alert("Successfully signed up!");
+        return true;  // Allow form submission
+      } else { 
+        alert("Invalid Password!");
+        return false;  // Prevent form submission
+      }
+    }
+  </script>
+</head>
+<body style="background-color:MediumAquamarine;">
+
+  <form align="center" name="myForm" onsubmit="return validateForm()" method="post">
+    <h1>REGISTRATION FORM</h1>
+
+    <label for="fname">User Name:</label>
+    <input type="text" id="fname" name="fname" required><br><br>
+
+    <label for="mail">Mail ID:</label>
+    <input type="email" id="mail" name="mail" required><br><br> 
+
+    <label for="pswd">Password:</label>
+    <input type="password" id="pswd" name="pswd" required><br><br>
+
+    <label for="cpswd">Confirm Password:</label>
+    <input type="password" id="cpswd" name="cpswd" required><br><br>
+
+    <label for="ph">Phone Number:</label>
+    <input type="tel" id="ph" name="ph" pattern="[0-9]{10}" required><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br><br>
+
+    <input type="checkbox" id="con" name="con" required>
+    <label for="con"> I agree to all the terms and conditions </label><br><br>
+
+    <input type="submit" id="b1" name="submit" value="Login">
+    <input type="reset" name="cancel" id="b2" value="Cancel"><br>
+	<a href="C:\Users\KarthiS\Desktop\ADD PRGM\bird sys web .html">click here</a>
+
+  </form>
+  
+</body>
+</html>
